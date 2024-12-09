@@ -4,10 +4,11 @@ import random
 """2 Random numbers called"""
 def calculator(caseNumber1, caseNumber2):
 
-    # Simple math code for addition, subtraction, and multiplication
-    print(f"{caseNumber1}+{caseNumber2} = {caseNumber1+caseNumber2}")
-    print(f"{caseNumber1}-{caseNumber2} = {caseNumber1-caseNumber2}")
-    print(f"{caseNumber1}*{caseNumber2} = {caseNumber1*caseNumber2}")
+    #Integer Division removes the decimal and all numbers after
+    print(f"Integer Division: {caseNumber1} // {caseNumber2} = {caseNumber1//caseNumber2}")
+
+    #Fload Division gives an accurate division value
+    print(f"Float Division: {caseNumber1} / {caseNumber2} = {caseNumber1/caseNumber2}")
 
 if __name__ == "__main__":
 
