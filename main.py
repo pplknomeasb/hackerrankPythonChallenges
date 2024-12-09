@@ -2,22 +2,21 @@
 import random
 
 """2 Random numbers called"""
-def calculator(caseNumber1, caseNumber2):
+def calculator(caseNumber):
 
-    #Integer Division removes the decimal and all numbers after
-    print(f"Integer Division: {caseNumber1} // {caseNumber2} = {caseNumber1//caseNumber2}")
+    #Prints the square root value for every number between 0 and the generated number
 
-    #Fload Division gives an accurate division value
-    print(f"Float Division: {caseNumber1} / {caseNumber2} = {caseNumber1/caseNumber2}")
+    for currentNumber in range(0, caseNumber):
+        print(f"{currentNumber} squared equals {currentNumber ** 2}")
 
 if __name__ == "__main__":
 
     # Randomized a number between 0 and 30 for 2 Variables
     number1 = random.randint(0, 20)
-    number2 = random.randint(0, 20)
-    print(number1)
-    print(number2)
+
+    print(f"The generated number is {number1}")
+
     print()
 
     #Sends the two random numbers to the calculator function
-    calculator(number1, number2)
+    calculator(number1)
