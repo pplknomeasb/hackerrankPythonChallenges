@@ -1,7 +1,7 @@
 """Hacker Rank Challenges"""
 import random
 
-"""2 Random numbers called"""
+#Random number called
 def printedValue(caseNumber):
 
     #Creating a string holder
