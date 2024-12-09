@@ -1,30 +1,22 @@
 """Hacker Rank Challenges"""
 import random
 
-"""Randomized Number brought into function to check for even or odd number"""
-def evenOddCheck(checkNumber):
+"""2 Random numbers called"""
+def calculator(caseNumber1, caseNumber2):
 
-    """Modulator checks if number returns Remainder"""
-    """Even numbers return 0. Odd numbers return > 0 remainder"""
-    if checkNumber % 2 == 0:
-
-        """2, 4, and anything greater than 20 is to return not Weird"""
-        if (checkNumber >= 2 and checkNumber < 5) or (checkNumber > 20):
-            print("Not Weird")
-        else:
-
-            """Any even number between 5 and 19 is to return Weird"""
-            print("Weird")
-    else:
-
-        """Prints Weird if any number returns a remainder with %"""
-        print("Weird")
+    # Simple math code for addition, subtraction, and multiplication
+    print(f"{caseNumber1}+{caseNumber2} = {caseNumber1+caseNumber2}")
+    print(f"{caseNumber1}-{caseNumber2} = {caseNumber1-caseNumber2}")
+    print(f"{caseNumber1}*{caseNumber2} = {caseNumber1*caseNumber2}")
 
 if __name__ == "__main__":
 
-    """Randomized a number between 0 and 30"""
-    number = random.randint(0, 30)
-    print(number)
+    # Randomized a number between 0 and 30 for 2 Variables
+    number1 = random.randint(0, 20)
+    number2 = random.randint(0, 20)
+    print(number1)
+    print(number2)
+    print()
 
-    """Calls evenOddCheck class and sends the random number"""
-    evenOddCheck(number)
+    #Sends the two random numbers to the calculator function
+    calculator(number1, number2)
