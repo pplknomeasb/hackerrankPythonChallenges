@@ -1,22 +1,26 @@
 """Hacker Rank Challenges"""
-import random
 
-"""2 Random numbers called"""
-def calculator(caseNumber):
+#Program designed to calculate if current year is a leap year
 
-    #Prints the square root value for every number between 0 and the generated number
+def is_leap(year):
 
-    for currentNumber in range(0, caseNumber):
-        print(f"{currentNumber} squared equals {currentNumber ** 2}")
+    #Leap year is instantiated as false
+    leap = False
 
-if __name__ == "__main__":
+    #If year is evening divisible by 4, the value is changed to true
+    if year % 4 == 0:
+        leap = True
 
-    # Randomized a number between 0 and 30 for 2 Variables
-    number1 = random.randint(0, 20)
+    #The majority of years that are divisible by 100 evening are not leap years
+    if year % 100 == 0:
+        leap = False
 
-    print(f"The generated number is {number1}")
+        #Years that are divisible by 100 and 400 are leap years
+        if year % 400 == 0:
+            leap = True
 
-    print()
 
-    #Sends the two random numbers to the calculator function
-    calculator(number1)
+    return leap
+
+year = int(input())
+print(is_leap(year))
