@@ -1,0 +1,1 @@
+Integer division is dividing numbers and returning a result of a whole number; removing the decimal and all numbers after.  Float Division is dividing numbers and returning the true value including the decimal and all numbers after.
