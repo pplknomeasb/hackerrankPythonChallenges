@@ -9,7 +9,7 @@ def evenOddCheck(checkNumber):
     if checkNumber % 2 == 0:
 
         """2, 4, and anything greater than 20 is to return not Weird"""
-        if (checkNumber >= 2 and checkNumber < 5) or (checkNumber >= 20):
+        if (checkNumber >= 2 and checkNumber < 5) or (checkNumber > 20):
             print("Not Weird")
         else:
 
