@@ -2,12 +2,22 @@
 import random
 
 """2 Random numbers called"""
-def calculator(caseNumber):
+def printedValue(caseNumber):
 
-    #Prints the square root value for every number between 0 and the generated number
+    #Creating a string holder
+    printedNumber = ""
 
-    for currentNumber in range(0, caseNumber):
-        print(f"{currentNumber} squared equals {currentNumber ** 2}")
+    #Range starts at 1 because thats the number we want to start the string with
+    for currentNumber in range(1, caseNumber):
+
+        #Each loop through builds a string value adding current place holder
+        printedNumber = printedNumber + str(currentNumber)
+
+    #The loop doesn't pring the final value.  Adds one to catch the last digit
+    printedNumber = printedNumber + str(currentNumber + 1)
+
+    print(printedNumber)
+
 
 if __name__ == "__main__":
 
@@ -18,5 +28,5 @@ if __name__ == "__main__":
 
     print()
 
-    #Sends the two random numbers to the calculator function
-    calculator(number1)
+    #Sends the random number to the calculator function
+    printedValue(number1)
