@@ -1,32 +1,22 @@
 """Hacker Rank Challenges"""
-import random
+import re
 
-#Random number called
-def printedValue(caseNumber):
+S = "aaabbabaakldaaaaa"
+k = "aa"
 
-    #Creating a string holder
-    printedNumber = ""
+# Find all matches using finditer with positive lookahead
+matches = list(re.finditer(f'(?={k})', S))
 
-    #Range starts at 1 because thats the number we want to start the string with
-    for currentNumber in range(1, caseNumber):
-
-        #Each loop through builds a string value adding current place holder
-        printedNumber = printedNumber + str(currentNumber)
-
-    #The loop doesn't pring the final value.  Adds one to catch the last digit
-    printedNumber = printedNumber + str(currentNumber + 1)
-
-    print(printedNumber)
-
-
-if __name__ == "__main__":
-
-    # Randomized a number between 0 and 30 for 2 Variables
-    number1 = random.randint(0, 20)
-
-    print(f"The generated number is {number1}")
-
+# If no matches found
+if not matches:
+    print((-1, -1))
+else:
+    # Print all matches with corrected end index
+    print(f"There are {len(matches)} case(s) that {k} occurred")
     print()
+    for match in matches:
 
-    #Sends the random number to the calculator function
-    printedValue(number1)
+        start = match.start()
+        # End index should be start + len(k) - 1 to match the sample outpwut
+        end = start + len(k) - 1
+        print(f"{(start, end)}")
